@@ -56,8 +56,9 @@ app.use((req,res,next)=>{
 app.use('/',require('./routes/index'));
 app.use('/users',require('./routes/users'));
 app.use('/products',require('./routes/product'));
-
+app.use('/sponsor',require('./routes/sponsor'));
 
 
 app.use(express.static('./views/public'))
+
 app.listen(PORT,console.log('Server started on port '+PORT));
