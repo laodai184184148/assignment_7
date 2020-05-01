@@ -18,7 +18,7 @@ mongoose
   .then(() => console.log('MongoDB Connected'))
   .catch(err => console.log(err));
 
-const PORT=process.env.PORT||2000;
+const PORT=process.env.PORT||3003;
 
 //ejs
 app.use(expressLayouts);
@@ -61,4 +61,4 @@ app.use('/sponsor',require('./routes/sponsor'));
 
 app.use(express.static('./views/public'))
 
-app.listen(PORT,console.log('Server started on port '+PORT));
+app.listen(PORT,()=> console.log('Server started on port '+PORT));
