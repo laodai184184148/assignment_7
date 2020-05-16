@@ -1,0 +1,95 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+$(document).ready(function(e) {
+   $('.has-sub').click(function(){
+		$(this).toggleClass('tap');
+	});
+});
+
+</script>
+<style type="text/css">
+  * {padding:0; margin:0;}
+  .main-nav {width:250px; background: rgba(160,193,199,1.00);}
+  .main-nav li {list-style: none;}
+  .main-nav a {
+    color: #FFF;
+    
+    letter-spacing: .2em;
+    text-decoration: none;
+    display: block;
+    padding: 10px 0 10px 20px;
+    border-bottom: 1px dotted gray;
+  }
+  .main-nav a:hover {background: rgba(118,166,174,1.00);}
+  .main-nav-ul ul {display: none;}
+  .main-nav-ul li.tap ul {display: block;}
+  
+  .main-nav-ul ul a:before {
+    content: '\203A';
+    margin-right: 20px;
+  }
+  
+  .main-nav .sub-arrow:after {
+    content: '\203A';
+    float: right;
+    margin-right: 20px;
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+  }
+  .main-nav li.tap .sub-arrow:after {
+    content: '\2039';
+  }
+  .main-nav-ul ul li a{
+    font-size: 75%;
+  }
+  </style>
+<div class="col-lg-3">
+
+        <nav class="main-nav">
+          <ul class="main-nav-ul">
+            <li class="has-sub"><a href="#">CATEGORY 1<span class="sub-arrow"></span></a>
+              <ul>
+                 <li><a href="#">Bia, nước uống có cồn</a></li>
+                  <li><a href="#">Nước ngọt, giải khát</a></li>
+                  <li><a href="#">Nước suối, nước khoáng</a></li>
+                  <li><a href="#">Nước ép trái cây</a></li>
+                  <li><a href="#">Nước yến </a></li>
+                  <li><a href="#">Cà phê</a></li>
+                  <li><a href="#">Sữa trái cây</a></li>
+                  <li><a href="#">Mật ong</a></li>
+                  <li><a href="#">Trái cây hộp</a></li>
+               </ul>
+            </li>             
+              <li class="has-sub"><a href="#">CATEGORY 2<span class="sub-arrow"></span></a>
+                <ul>
+                    <li><a href="#">SUB CATEGORY 1</a></li>
+                    <li><a href="#">SUB CATEGORY 2</a></li>
+                    <li><a href="#">SUB CATEGORY 3</a></li>
+                    <li><a href="#">SUB CATEGORY 4</a></li>
+                    <li><a href="#">SUB CATEGORY 5</a></li>
+                    <li><a href="#">SUB CATEGORY 6</a></li>
+                 </ul>
+              </li>
+              <li class="has-sub" ><a href="#">CATEGORY 3<span class="sub-arrow"></span></a>
+              <ul>
+                <li><a href="#">SUB CATEGORY 1</a></li>
+                <li><a href="#">SUB CATEGORY 2</a></li>
+                <li><a href="#">SUB CATEGORY 3</a></li>
+                <li><a href="#">SUB CATEGORY 4</a></li>
+                <li><a href="#">SUB CATEGORY 5</a></li>
+                <li><a href="#">SUB CATEGORY 6</a></li>
+              </ul>
+            </li>
+              <li><a href="#">CATEGORY 4</a></li>
+              <li><a href="#">CATEGORY 5</a></li>
+           </ul>
+        </nav>
+        
+            
+    
+
+</div>
+<!-- /.col-lg-3 -->
+

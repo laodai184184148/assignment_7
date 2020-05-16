@@ -1,0 +1,41 @@
+<%- include('partials/navigation.ejs')%>
+<body>
+    <div class="container">
+        <br><br><br>
+        <h1><%=title%></h1>
+        <%if (products!=null) { %>
+        <div class="cart page">
+            <ul class="list-group">
+                <% for(let p of products) {%>
+                <li class="list-group-item clearfix">
+                    <div class="col-xs-5">
+                        <strong><%=p.item.title%> </strong><br />
+                        <em> <%=p.item.description%> </em>
+                    </div>
+                    <div class="col-xs-2 text-right">
+                        <%=p.quantity%>
+                    </div>
+                    <div class="col-xs-3 text-right">
+                        <%=p.item.price%> CHF
+                    </div>
+                    <div class="col-xs-2 text-right">
+                        <a href="/remove/<%=p.item._id%>" class="btn btn-danger"></i> Remove</a>
+                    </div>
+                </li>
+                <%
+            }
+            %>
+            </ul>
+        </div>
+        <div class="text-right">
+            <strong>Total:<%=totalPrice%> CHF</strong>
+        </div>
+        <hr>
+        <div class="text-right">
+            <a href="#" type="button" class="btn btn-success">Checkout</a>
+        </div>
+    </div>
+    <% }else  if (products==null) { %>
+        Your cart is empty
+    <% } %>
+</body>

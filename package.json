@@ -1,7 +1,6 @@
 {
   "name": "appjs",
   "version": "1.0.0",
-  "description": "",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
@@ -20,9 +19,20 @@
     "mongoose": "^5.9.10",
     "passport": "^0.4.1",
     "passport-local": "^1.0.0",
-    "req-flash": "0.0.3"
+    "req-flash": "0.0.3",
+    "swagger-jsdoc": "^4.0.0",
+    "swagger-ui-express": "^4.1.4"
   },
   "devDependencies": {
     "nodemon": "^2.0.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laodai184184148/4th_assignment.git"
+  },
+  "bugs": {
+    "url": "https://github.com/laodai184184148/4th_assignment/issues"
+  },
+  "homepage": "https://github.com/laodai184184148/4th_assignment#readme",
+  "description": ""
 }
