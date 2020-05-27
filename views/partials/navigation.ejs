@@ -1,24 +1,24 @@
 <!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="container">
-        <a class="navbar-brand" href="/">Beauty Store</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
-                    <a class="nav-link" href="/cart">Cart
-                        <span class="sr-only">(current)</span>
-                    </a>
-                </li>
-                <li class="nav-item ">
-                    <%if (user==null) { %>
-                    <a class="nav-link" href="/users/login">Login</a>
-                    <% }else  { %>
-                        <a class="nav-link" href="/users/logout">Logout</a>
-                    <% } %>
-                </li> -->
-            </ul>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<nav class="navbar navbar-expand-lg  bg-light fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a href="/">
+                <img src="/assets/img/logo/logo.png" alt="">
+            </a>
         </div>
+        <form class="form-inline">
+           
+          </form>
+                <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/cart"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+                        <%if (user==null) { %>
+                            <li><a href="/users/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                        <% }else  { %>
+                            <li><a href="/users/logout"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+                        <% } %>
+                </ul>
+                
     </div>
 </nav>

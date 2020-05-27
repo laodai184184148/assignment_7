@@ -28,7 +28,7 @@ exports.getAllProducts = (req, res, next) => {
 exports.getProductDetail = (req, res, next) => {
     Product.findById(req.params.id)
         .then(product => {
-            res.render('product-detail', { prod: product, pageTitle: 'Product Detail', path: '/', name: 'Edward' });
+            res.render('product-details', { prod: product, pageTitle: 'Product Detail', path: '/', name: 'Edward',user:req.user });
         })
         .catch(err => console.log(err));
 }
